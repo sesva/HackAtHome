@@ -19,10 +19,10 @@ namespace HackAtHomeClient
     {
         private ListView lvEvidencias;
         List<Evidence> listEvidencias;
-        Complex Data;
-        protected override void OnCreate(Bundle bundle)
+        Complex dataEvidencias;
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
             // Create your application here
             SetContentView(Resource.Layout.layoutEvidencia);
@@ -41,31 +41,29 @@ namespace HackAtHomeClient
                 intent.PutExtra("token",token); 
                 StartActivity(intent);
             };
-            if (bundle != null)
-            {                
-                Android.Util.Log.Debug("Log", "Recovered Instance State");
-                Toast.MakeText(this, "Not reload Evidencias", ToastLength.Long).Show();
-            }
-            else
-            {
-                getEvidencias(token);
-                Toast.MakeText(this,"Get Evidencias",ToastLength.Long).Show();
-            }
-            Data = (Complex)this.FragmentManager.FindFragmentByTag("Data");
-            if (Data == null)
-            {
-                // No ha sido almacenado, agregar el fragmento a la Activity
-                Data = new Complex();
-                var FragmentTransaction = this.FragmentManager.BeginTransaction();
-                FragmentTransaction.Add(Data, "Data");
-                FragmentTransaction.Commit();
-            }
+            getEvidencias(token);
         }
 
         public async void getEvidencias(string token)
         {
-            var serviceClient = new ServiceClient();
-            listEvidencias = await serviceClient.GetEvidencesAsync(token);            
+            dataEvidencias = (Complex)this.FragmentManager.FindFragmentByTag("DataEvidencias");
+            if (dataEvidencias == null)
+            {
+                
+                // No ha sido almacenado, agregar el fragmento a la Activity
+                dataEvidencias = new Complex();
+                var FragmentTransaction = this.FragmentManager.BeginTransaction();
+                FragmentTransaction.Add(dataEvidencias, "DataEvidencias");
+                FragmentTransaction.Commit();
+                var serviceClient = new ServiceClient();
+                listEvidencias = await serviceClient.GetEvidencesAsync(token);
+                dataEvidencias.Evidences = listEvidencias;
+            }
+            else
+            {
+                listEvidencias = dataEvidencias.Evidences;
+            }
+                       
             lvEvidencias.Adapter = new HackAtHome.CustomAdapter.EvidencesAdapter
                 (
                     this,
@@ -76,9 +74,5 @@ namespace HackAtHomeClient
                 );            
         }
 
-        protected override void OnSaveInstanceState(Bundle outState)
-        {
-            base.OnSaveInstanceState(outState);            
-        }
     }
 }
