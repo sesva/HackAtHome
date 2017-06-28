@@ -31,8 +31,10 @@ namespace HackAtHomeClient
             var serviceClient = new ServiceClient();
             ResultInfo resultInfo = await serviceClient.AutenticateAsync(correoEstudiante, contraseñaEstudiante);
 
+            validarMicrosoft(correoEstudiante);
+
             if ((int)resultInfo.Status == 1)
-            {
+            {                
                 var Intent = new Android.Content.Intent(this, typeof(Evidencias));
                 Intent.PutExtra("token", resultInfo.Token);
                 Intent.PutExtra("nombre", resultInfo.FullName);
@@ -46,6 +48,18 @@ namespace HackAtHomeClient
                 AlertDialog.Show();
             }
             
+        }
+
+        private async void validarMicrosoft(string correoEstudiante)
+        {
+            var microsoftServiceClient = new MicrosoftServiceClient();
+            var labItem = new LabItem
+            {
+                Email = correoEstudiante,
+                Lab = "Hack@Home",
+                DeviceId = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId)
+            };
+            await microsoftServiceClient.SendEvidence(labItem);
         }
     }
 }
