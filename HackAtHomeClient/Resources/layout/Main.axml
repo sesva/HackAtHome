@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/txtCorreo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVieCorreo"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginTop="30.0dp"
+        android:layout_marginRight="28.5dp" />
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ediTexCorreo"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginBottom="0.0dp" />
+    <TextView
+        android:text="@string/txtPassword"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViePassword"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="27.0dp"
+        android:layout_marginTop="28.5dp" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ediTexContraseña"
+        android:layout_marginLeft="23.5dp"
+        android:layout_marginRight="25.5dp" />
+    <Button
+        android:text="@string/btnValidar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnValidar"
+        android:layout_gravity="center"
+        android:layout_marginTop="31.0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" />
+</LinearLayout>
