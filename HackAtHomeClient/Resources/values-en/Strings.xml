@@ -5,6 +5,7 @@
   <string name="txtCorreo">Email:</string>
   <string name="txtPassword">Password:</string>
   <string name="btnValidar">Validate</string>
-
+  <string name="txtEvidencia">Evidences</string>
+  <string name="txtDescripcion">Description</string>
 
 </resources>

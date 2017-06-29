@@ -6,5 +6,6 @@
   <string name="txtPassword">Contraseña:</string>
   <string name="btnValidar">Validar</string>
   <string name="txtEvidencia">Evidencia</string>
-  <string name="txtDescripcion">Descripcion</string>
+  <string name="txtDescripcion">Descripción</string>
+  
 </resources>

@@ -14,7 +14,7 @@ using HackAtHome.Entities;
 
 namespace HackAtHomeClient
 {
-    [Activity(Label = "Evidencias")]
+    [Activity(Label = "@string/ApplicationName", Icon = "@drawable/Logo")]
     public class Evidencias : Activity
     {
         private ListView lvEvidencias;
@@ -38,7 +38,7 @@ namespace HackAtHomeClient
                 intent.PutExtra("tituloEvidencia", evidenciaSeleted.Title);
                 intent.PutExtra("statusEvidencia",evidenciaSeleted.Status);
                 intent.PutExtra("nombre",txtNombre.Text);
-                intent.PutExtra("token",token); 
+                intent.PutExtra("token",token);
                 StartActivity(intent);
             };
             getEvidencias(token);
@@ -71,8 +71,7 @@ namespace HackAtHomeClient
                     Resource.Layout.ListItem,
                     Resource.Id.txtNombre,
                     Resource.Id.txtEstado
-                );            
+                );
         }
-
     }
 }

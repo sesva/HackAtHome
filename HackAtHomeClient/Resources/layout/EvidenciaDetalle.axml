@@ -9,36 +9,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtNombre"
-        android:gravity="right" />
+        android:gravity="right"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16.0dp" />
     <TextView
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEvidencia"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
     <TextView
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEstado"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
     <TextView
         android:text="@string/txtDescripcion"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDescripcion" />
+        android:id="@+id/txtDescripcion"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20.0dp" />
+    <android.webkit.WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView1" />
     <TextView
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtContenidoDescripcion" />
+        android:id="@+id/txtContenidoDescripcion"
+        android:layout_marginLeft="28.0dp"
+        android:layout_marginRight="28.0dp"
+        android:layout_marginBottom="10dp" />
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imgEvidencia" />
+        android:id="@+id/imgEvidencia"
+        android:layout_marginLeft="16.0dp"
+        android:layout_marginRight="16.0dp" />
 </LinearLayout>

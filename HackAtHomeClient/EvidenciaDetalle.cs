@@ -15,7 +15,7 @@ using System.Net;
 
 namespace HackAtHomeClient
 {
-    [Activity(Label = "EvidenciaDetalle")]
+    [Activity(Label = "@string/ApplicationName", Icon = "@drawable/Logo")]
     public class EvidenciaDetalle : Activity
     {
         private TextView txtContenidoDescrip;
