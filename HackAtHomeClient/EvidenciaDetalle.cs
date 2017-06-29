@@ -12,14 +12,15 @@ using Android.Widget;
 using HackAtHome.SAL;
 using Android.Graphics;
 using System.Net;
+using Android.Webkit;
 
 namespace HackAtHomeClient
 {
     [Activity(Label = "@string/ApplicationName", Icon = "@drawable/Logo")]
     public class EvidenciaDetalle : Activity
     {
-        private TextView txtContenidoDescrip;
         private ImageView imgEvidencia;
+        private WebView wvDescripContent;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,8 +31,9 @@ namespace HackAtHomeClient
             var txtNombre = FindViewById<TextView>(Resource.Id.txtNombre);
             var txtTituloEvidencia = FindViewById<TextView>(Resource.Id.txtEvidencia);
             var txtEstado = FindViewById<TextView>(Resource.Id.txtEstado);
-            txtContenidoDescrip = FindViewById<TextView>(Resource.Id.txtContenidoDescripcion);
+ 
             imgEvidencia = FindViewById<ImageView>(Resource.Id.imgEvidencia);
+            wvDescripContent = FindViewById<WebView>(Resource.Id.wvDescripcionContenido);
 
             txtNombre.Text = Intent.Extras.GetString("nombre");
             txtTituloEvidencia.Text = Intent.Extras.GetString("tituloEvidencia");
@@ -45,7 +47,7 @@ namespace HackAtHomeClient
         {
             var serviceClient = new ServiceClient();
             var evidenceDetail = await serviceClient.GetEvidenceByIDAsync(token,id);
-            txtContenidoDescrip.Text = evidenceDetail.Description;
+            setContentWebView(evidenceDetail.Description);
             var imageBitmap = GetImageBitmapFromUrl(evidenceDetail.Url);
             imgEvidencia.SetImageBitmap(imageBitmap);
         }
@@ -64,6 +66,11 @@ namespace HackAtHomeClient
             }
 
             return imageBitmap;
+        }
+
+        private void setContentWebView(string content)
+        {
+            wvDescripContent.LoadDataWithBaseURL(null,content,"text/html","utf-8",null);
         }
     }
 }

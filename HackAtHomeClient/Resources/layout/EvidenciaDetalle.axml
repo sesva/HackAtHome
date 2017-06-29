@@ -34,22 +34,13 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDescripcion"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20.0dp" />
+        android:id="@+id/txtDescripcion" />
+  
     <android.webkit.WebView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/webView1" />
-    <TextView
-        android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtContenidoDescripcion"
-        android:layout_marginLeft="28.0dp"
-        android:layout_marginRight="28.0dp"
-        android:layout_marginBottom="10dp" />
+        android:id="@+id/wvDescripcionContenido" />
+  
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
         android:layout_width="match_parent"

@@ -90,9 +90,6 @@ namespace HackAtHomeClient
 			// aapt resource value: 0x7f050007
 			public const int lvEvidencias = 2131034119;
 			
-			// aapt resource value: 0x7f050005
-			public const int txtContenidoDescripcion = 2131034117;
-			
 			// aapt resource value: 0x7f050003
 			public const int txtDescripcion = 2131034115;
 			
@@ -113,6 +110,9 @@ namespace HackAtHomeClient
 			
 			// aapt resource value: 0x7f050004
 			public const int webView1 = 2131034116;
+			
+			// aapt resource value: 0x7f050004
+			public const int wvDescripcionContenido = 2131034116;
 			
 			static Id()
 			{
