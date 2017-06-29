@@ -69,26 +69,26 @@ namespace HackAtHomeClient
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f05000b
-			public const int btnValidar = 2131034123;
-			
-			// aapt resource value: 0x7f05000a
-			public const int ediTexContraseña = 2131034122;
-			
-			// aapt resource value: 0x7f050008
-			public const int ediTexCorreo = 2131034120;
-			
-			// aapt resource value: 0x7f050005
-			public const int imgEvidencia = 2131034117;
+			// aapt resource value: 0x7f05000d
+			public const int btnValidar = 2131034125;
 			
 			// aapt resource value: 0x7f05000c
-			public const int linearLayout1 = 2131034124;
+			public const int ediTexContraseña = 2131034124;
 			
-			// aapt resource value: 0x7f05000d
-			public const int linearLayout2 = 2131034125;
+			// aapt resource value: 0x7f05000a
+			public const int ediTexCorreo = 2131034122;
 			
 			// aapt resource value: 0x7f050006
-			public const int lvEvidencias = 2131034118;
+			public const int imgEvidencia = 2131034118;
+			
+			// aapt resource value: 0x7f050008
+			public const int linearLayout1 = 2131034120;
+			
+			// aapt resource value: 0x7f05000e
+			public const int linearLayout2 = 2131034126;
+			
+			// aapt resource value: 0x7f050007
+			public const int lvEvidencias = 2131034119;
 			
 			// aapt resource value: 0x7f050003
 			public const int txtDescripcion = 2131034115;
@@ -102,11 +102,14 @@ namespace HackAtHomeClient
 			// aapt resource value: 0x7f050000
 			public const int txtNombre = 2131034112;
 			
-			// aapt resource value: 0x7f050007
-			public const int txtVieCorreo = 2131034119;
-			
 			// aapt resource value: 0x7f050009
-			public const int txtViePassword = 2131034121;
+			public const int txtVieCorreo = 2131034121;
+			
+			// aapt resource value: 0x7f05000b
+			public const int txtViePassword = 2131034123;
+			
+			// aapt resource value: 0x7f050004
+			public const int webView1 = 2131034116;
 			
 			// aapt resource value: 0x7f050004
 			public const int wvDescripcionContenido = 2131034116;

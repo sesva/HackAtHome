@@ -15,8 +15,9 @@
             android:text="@string/txtCorreo"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/txtVieCorreo"
-            android:layout_width="118dp"
             android:layout_height="match_parent"
+            android:layout_marginRight="0.0dp"
+            android:layout_width="118dp"
             android:gravity="right" />
         <EditText
             android:inputType="textEmailAddress"
@@ -38,7 +39,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/txtViePassword"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="right" />
         <EditText
             android:inputType="textPassword"
             android:id="@+id/ediTexContraseña"

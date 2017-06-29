@@ -16,7 +16,7 @@ using Android.Webkit;
 
 namespace HackAtHomeClient
 {
-    [Activity(Label = "EvidenciaDetalle")]
+    [Activity(Label = "@string/ApplicationName", Icon = "@drawable/Logo")]
     public class EvidenciaDetalle : Activity
     {
         private ImageView imgEvidencia;
